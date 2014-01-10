@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>ez install</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/list.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="nav" onclick="showCheckInstall();">安裝(<span id="countSelected">0</span>)</div>
+		<div id="banner"></div>
+		<div id="mainBox">
+			<div id="side">
+				<ul>
+					<li id="tag#0" onclick="tagPress(this, event);">所有項目</li>
+					<hr>
+					<li id="tag#20" onclick="tagPress(this, event);" style="background-image:url('./img/class/19.png')"><input type="checkbox" id="tagCheck#20">小學</li>
+					<li id="tag#21" onclick="tagPress(this, event);" style="background-image:url('./img/class/20.png')"><input type="checkbox" id="tagCheck#21">中學</li>
+					<li id="tag#22" onclick="tagPress(this, event);" style="background-image:url('./img/class/21.png')"><input type="checkbox" id="tagCheck#22">大學</li>
+					<hr>
+					<li id="tag#1" onclick="tagPress(this, event);" style="background-image:url('./img/class/applications-office.png')"><input type="checkbox" id="tagCheck#1">辦公</li>
+					<li id="tag#2" onclick="tagPress(this, event);" style="background-image:url('./img/class/applications-graphics.png')"><input type="checkbox" id="tagCheck#2">美工繪圖</li>
+					<ul>
+						<li id="tag#3" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#3">圖片製作</li>
+						<li id="tag#4" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#4">動畫製作</li>
+					</ul>
+					<li id="tag#5" onclick="tagPress(this, event);" style="background-image:url('./img/class/applications-multimedia.png')"><input type="checkbox" id="tagCheck#5">影音</li>
+					<ul>
+						<li id="tag#6" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#6">影音播放</li>
+						<li id="tag#7" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#7">影音編輯製作</li>
+						<li id="tag#8" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#8">光碟燒綠製作</li>
+					</ul>
+					<li id="tag#9" onclick="tagPress(this, event);" style="background-image:url('./img/class/applications-internet.png')"><input type="checkbox" id="tagCheck#9">網際網路</li>
+					<li id="tag#10" onclick="tagPress(this, event);" style="background-image:url('./img/class/applications-accessories.png')"><input type="checkbox" id="tagCheck#10">教育</li>
+					<ul>
+						<li id="tag#12" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#12">程式設計</li>
+						<li id="tag#13" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#13">數學</li>
+						<li id="tag#14" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#14">化學</li>
+						<li id="tag#15" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#15">生化</li>
+						<li id="tag#16" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#16">天文</li>
+						<li id="tag#17" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#17">地理</li>
+						<li id="tag#18" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#18">物理</li>
+						<li id="tag#19" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#19">語言</li>
+					</ul>
+					<li id="tag#11" onclick="tagPress(this, event);" style="background-image:url('./img/class/11.png');"><input type="checkbox" id="tagCheck#11">自由教材</li>
+					<li id="tag#23" onclick="tagPress(this, event);" style="background-image:url('./img/class/applications-games.png')"><input type="checkbox" id="tagCheck#23">遊戲</li>
+					<li id="tag#24" onclick="tagPress(this, event);" style="background-image:url('./img/class/applications-utilities.png')"><input type="checkbox" id="tagCheck#24">附屬應用程式</li>
+					<li id="tag#26" onclick="tagPress(this, event);" style="background-image:url('./img/class/25.png');display:none;"><input type="checkbox" id="tagCheck#26">教室建置</li>
+					<li id="tag#27" onclick="tagPress(this, event);" style="background-image:url('./img/class/25.png');"><input type="checkbox" id="tagCheck#27">教師工具</li>
+					<ul>
+						<li id="tag#25" onclick="tagPress(this, event);"><input type="checkbox" id="tagCheck#25">電子白板</li>
+					</ul>
+				</ul>
+			</div>
+			<div id="main">
+				<div id="toolbar">
+					<select id="selecter">
+						<option value="default"></option>
+						<option value="selectAll">全選</option>
+						<option value="clearVisible">清除本頁</option>
+						<option value="clearAll">清除全部</option>
+					</select>
+					<input type="checkbox" id="selecterCheck">
+					<select id="view">
+						<option value="BIcon">圖示檢視</option>
+						<option value="list">清單檢視</option>
+					</select>
+					<select id="viewInstalled">
+						<option value="true">顯示已安裝</option>
+						<option value="false">隱藏已安裝</option>
+					</select>
+					<div class="right">以下顯示<span id="allCount">NaN</span>個軟體 <input type="text" id="search"><input type="button" id="searchBu" value="搜尋"></div>
+				</div>
+				<div id="mainPad1"></div>
+				<div id="mainContent" class="BIcon"></div>
+				<div id="mainPad2"></div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+	<div id="comment">
+		<h2></h2>
+		<p></p>
+	</div>
+	<div id="checkInstall">
+		<h2><a id="qq">您即將安裝</a></h2>
+		<ol id="checkInstallList"></ol>
+		<span class="warn">※開始安裝後，請勿取消。</span><div onclick="hideCheckInstall();">取消</div><div id="download">安裝</div>
+	</div>
+	<iframe id="installArea"></iframe>
+	<div id="cover"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿進度條改成用%計算
+確認套件庫來源
+使tag_list支援 多餘換行、註解
+偵測安裝是否成功
+
+./cgi-bin/install.cgi 和 ezinstall.sh 中的 gnome-terminal/konsole 自動判斷
+
+uninstall功能
+
+---
+安裝italc
+ROKYA於 2013年3月21日星期四UTC+8下午1時46分04秒寫道：
+ezinstall 大概是哪邊有問題呢@@?
+2013/3/20 Franklin Weng <fran...@goodhorse.idv.tw>
+好像 ezgo 軟體中心會不小心把 ezgo-lucid
+再加進來。我有擋掉一些，不過看來還是有漏洞。可能還有其他的地方會自動加。所以三不五時還是會聽到更新不正確，多半都是這個問題。

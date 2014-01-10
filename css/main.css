@@ -1,0 +1,496 @@
+body
+{
+	overflow: hidden;
+	margin: 0px;
+	background-color: #fff;
+	color: #000;
+	font-family: 文泉驛等寬微米黑;
+}
+
+#container
+{
+	margin: auto;
+	width: 940px;
+}
+
+.clear
+{
+	clear: both;
+}
+
+a
+{
+	color : #000;
+	text-decoration : none;
+}
+
+/*----------*/
+
+#banner
+{
+	width: 940px;
+	height: 120px;
+	background-image: url(../img/banner.png);
+	font-size: 50pt;
+	line-height: 100px;
+	text-align: left;
+}
+
+#nav
+{
+	float: right;
+	margin: 63px 25px 0px 0px;
+	width: 130px;
+	height: 46px;
+	color: #fff;
+	font-size: 16pt;
+	text-align: center;
+	line-height: 45px;
+	background-image: url(../img/install.png);
+	cursor: pointer;
+}
+
+#nav:hover
+{
+	background-image: url(../img/install_2.png);
+}
+
+/*----------*/
+
+#mainBox
+{
+	margin: 0px 5px 0px 5px;
+}
+
+/*----------*/
+
+#side
+{
+	overflow: auto;
+	float: left;
+	padding: 0px 4px 0px 4px;
+	width: 180px;
+}
+
+#side ul
+{
+	padding: 0px;
+	font-size: 15pt;
+	list-style: none;
+}
+
+#side ul ul
+{
+	display: none;
+	padding-left: 20px;
+	font-size: 13pt;
+}
+
+#side li
+{
+	margin: 3px;
+	padding-left: 2px;
+	line-height: 24px;
+	background-repeat: no-repeat;
+	background-position: 22px 2px;
+	background-size: 20px 20px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: background-color 0.2s linear;
+	-o-transition: background-color 0.2s linear;
+}
+
+#side li input
+{
+	margin-right: 24px;
+}
+
+#side li.selected
+{
+	color: #000;
+	background-color: #9cf;
+}
+
+#side li:hover
+{
+	background-color: #ddd;
+}
+
+#side li.selected:hover
+{
+	background-color: #5ad;
+}
+
+#side ul ul li
+{
+	padding-left: 15px;
+	line-height: 24px;
+}
+
+/*----------*/
+
+#main
+{
+	margin-left: 190px;
+	padding: 9px;
+}
+
+#mainContent.BIcon .item
+{
+	float: left;
+	margin: 8px;
+	padding: 100px 6px 6px 6px;
+	width: 100px;
+	height: 30px;
+	border: solid 2px #ddd;
+	border-radius: 5px;
+	background-position: 22px 22px;
+	background-repeat: no-repeat;
+	background-size: 64px 64px;
+	color: #000;
+	font-size: 10pt;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s 5inear;
+	-o-transition: background-color 0.2s linear;
+}
+
+#mainContent.BIcon .item:hover
+{
+	background-color: #eee;
+}
+
+#mainContent.BIcon .item.selected
+{
+	background-color: #ace;
+	border: solid 2px #ace;
+}
+
+#mainContent.BIcon .item.installed
+{
+	background-color: #bfb;
+	border: solid 2px #bfb;
+	cursor: default;
+}
+
+#mainContent.BIcon .item .checkbox
+{
+	margin: -120px 0px 70px 60px;
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/check.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: 50px 50px;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s 5inear;
+	-o-transition: opacity 0.2s linear;
+}
+
+#mainContent.BIcon .item.installed .checkbox
+{
+	background-image: url(../img/installed.png);
+	opacity: 1;
+}
+
+#mainContent.BIcon .item.selected .checkbox
+{
+	opacity: 1;
+}
+
+#mainContent.BIcon .item .namebox
+{
+	
+}
+
+#mainContent.BIcon .item .tagbox
+{
+	display: none;
+}
+
+/**..........**/
+
+#mainContent.list .item
+{
+	height: 30px;
+	background-position: 33px 3px;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	color: #000;
+	font-size: 13pt;
+	line-height: 30px;
+	cursor: pointer;
+	transition: background-color 0.2s linear;
+	-webkit-transition: background-color 0.2s linear;
+	-moz-transition: background-color 0.2s 5inear;
+	-o-transition: background-color 0.2s linear;
+}
+
+#mainContent.list .item:nth-child(2n)
+{
+	background-color: #eee;
+}
+
+#mainContent.list .item:hover
+{
+	background-color: #bbb;
+}
+
+#mainContent.list .item.selected
+{
+	background-color: #ace;
+}
+
+#mainContent.list .item.installed
+{
+	background-color: #bfb;
+	cursor: default;
+}
+
+#mainContent.list .item .checkbox
+{
+	float: left;
+	margin-right: 30px;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/check.png);
+	background-position: 3px 3px;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+	-webkit-transition: opacity 0.2s linear;
+	-moz-transition: opacity 0.2s 5inear;
+	-o-transition: opacity 0.2s linear;
+}
+
+#mainContent.list .item.installed .checkbox
+{
+	background-image: url(../img/installed.png);
+	opacity: 1;
+}
+
+#mainContent.list .item.selected .checkbox
+{
+	opacity: 1;
+}
+
+#mainContent.list .item .namebox
+{
+	float: left;
+	width: 300px;
+}
+
+#mainContent.list .item .tagbox
+{
+	float: left;
+}
+
+#mainContent
+{
+	overflow: auto;
+	padding: 15px 0px 15px 0px;
+	transition: opacity 0.3s linear;
+	-webkit-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+}
+
+#mainPad1
+{
+	position: relative;
+	margin: 0px 15px -15px 0px;
+	height: 15px;
+	background-image: url(../img/mainPad1.png);
+	background-repeat: repeat-x;
+	z-index: 1;
+}
+
+#mainPad2
+{
+	position: relative;
+	margin: -15px 15px 0px 0px;
+	height: 15px;
+	background-image: url(../img/mainPad2.png);
+	background-repeat: repeat-x;
+	z-index: 1;
+}
+
+/*----------*/
+
+#toolbar
+{
+	height: 30px;
+}
+
+#toolbar select
+{
+	height: 20px;
+}
+
+#toolbar .right
+{
+	float: right;
+	height: 20px;
+}
+
+#search
+{
+	width: 125px;
+	height: 20px;
+}
+
+#selecter
+{
+	width: 50px;
+}
+
+#view
+{
+	width: 100px;
+}
+
+#selecterCheck
+{
+	margin-left: -51px;
+	margin-right: 30px;
+}
+
+#selecterCheck.half
+{
+	opacity: 0.5;
+}
+
+/*----------*/
+
+#comment
+{
+	display: none;
+	position: absolute;
+	padding: 10px 5px 10px 90px;
+	width: 250px;
+	height: 100px;
+	border: solid 2px #ace;
+	border-radius: 5px;
+	background-color: #049;
+	background-position: 15px 25px;
+	background-repeat: no-repeat;
+	background-size: 64px 64px;
+	box-shadow: #999 3px 3px 10px;
+	color: #fff;
+	font-size: 10pt;
+	opacity: 0.85;
+	z-index: 11;
+}
+
+#comment h2
+{
+	margin: 0px;
+	font-size: 14pt;
+}
+
+#comment p
+{
+	margin: 10px 5px 5px 15px;
+}
+
+#cover
+{
+	position: absolute;
+	left: 0px;
+	top: -99999px;
+	background-color: #000;
+	opacity: 0;
+	z-index: 10;
+	transition: opacity 0.3s linear;
+	-webkit-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+}
+
+/*----------*/
+
+#checkInstall
+{
+	display: none;
+	position: absolute;
+	padding: 10px;
+	width: 480px;
+	height: 380px;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	background-color: #035;
+	background-image: url(../img/bgPad1.png);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	color: #fff;
+	z-index: 12;
+}
+
+#checkInstall h2
+{
+	margin: 0px;
+	font-size: 20pt;
+	font-weight: normal;
+	text-shadow: #333 2px 2px 2px;
+}
+
+#checkInstall ol
+{
+	overflow: auto;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	padding-left: 75px;
+	width: 375px;
+	height: 250px;
+}
+
+#checkInstall li
+{
+	padding: 0px 0px 0px 36px;
+	height: 36px;
+	background-image: url(../img/icon/cheese.svg);
+	background-repeat: no-repeat;
+	background-size: 32px 32px;
+	font-size: 13pt;
+	line-height: 36px;
+}
+
+#checkInstall div
+{
+	float: right;
+	margin: 0px 5px 0px 5px;
+	width: 75px;
+	height: 30px;
+	background-image: url(../img/install.png);
+	background-size: 75px 30px;
+	font-size: 14pt;
+	text-align: center;
+	line-height: 32px;
+	cursor: pointer;
+}
+
+#checkInstall div:hover
+{
+	background-image: url(../img/install_2.png);
+}
+
+.warn
+{
+	color: #fff;
+	font-size: 14pt;
+	line-height: 32px;
+}
+
+/*----------*/
+
+#installArea
+{
+	display: none;
+}

@@ -1,0 +1,64 @@
+一,加新套件而沒加新標籤的時候
+	1.在google doc上填好資料
+	https://docs.google.com/spreadsheet/ccc?key=0ApoAp5vVcx9TdG5YeHNXZEJCYjd3VkJKV29obEVucXc&hl=ja
+	須注意不可以有多餘的空白
+
+	2.把google doc下載成table.csv
+	放入Dropbox/ezgoinstall/python
+
+	3.執行Dropbox/ezgoinstall/python/csvtomysql.py
+	會自動產生出
+	     (1)list.js
+	     (2)list_json.py
+	自動分別放入
+	     (1)Dropbox/ezgoinstall/ezinstall/js
+	     (2)Dropbox/ezgoinstall/ezinstall/cgi-bin
+		  
+
+	4.把新的圖片放入Dropbox/ezgoinstall/ezinstall/img/icon
+	
+二,有要加新標籤的時候
+	作者rokya負責部份:
+		更新Dropbox/ezgoinstall/python/tag_list
+		注意不要有多餘的換行或空白
+		依照原來格式更新即可
+
+		更新完後,  請依照 一、重新處理
+	Maziazy負責部份:
+		網頁上的呈現
+		所以還是請聯絡他
+
+[Q&A]
+Q:當無法正常分類、search失效時，如何解決?
+A:檢查 python/tag_list 是否多了空白行
+
+Q:我明明沒安裝某個軟體, 卻說我已安裝?
+A:請察看browser.py裏面的[測試有無安裝 ver A/B]
+
+Q:軟體圖片沒顯示出來?
+A:請檢查python/table.csv所輸入的圖片名稱 是否和 img/icon/ 底下的完全一樣(包括大小寫)
+
+Q:加入新分類沒顯示出來?
+A:請聯絡Maziazy
+
+Q:分類按鈕失效?
+A:請聯絡作者
+
+Q:按下安裝後沒反應?
+A:檢查cgi-bin/install.cgi 必須要有可執行屬性
+
+[更新日誌]
+2012/9/9
+1. browser.py 對套件是否有安裝 改用嚴格檢查法, 開啟時間變久一點
+2. 大量修改python/table.csv
+
+2012/8/22
+1. python/table.csv的標籤 現在可以容忍;;之中有空白
+2. 新增分類 教師工具
+3. 更改python/csvtomysql.py寫法 全面支援utf-8
+
+2012/8/17
+1. 注解掉ezinstall.sh的檢查更新, 以COMMENT包起來
+2. python/csvtomysql.py 現在會自己移動list_json.py和list.js
+3. python/table.csv 現在可以有空白行,  或者用#當開頭的註解
+4. python/table.csv 現在支援.sh安裝, 請把sh檔案放在/cgi-bin/sh, 套件名稱請輸入安裝完之後dpkg -l看到的名稱
